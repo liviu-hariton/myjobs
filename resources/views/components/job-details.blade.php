@@ -12,8 +12,8 @@
         </div>
 
         <h3 class="card-title">{{ $job->title }}</h3>
-    </div>
-    <div class="card-footer">
-        <a href="{{ route('jobs.show', $job) }}" class="btn btn-sm btn-primary">Job details</a>
+        <div class="card-text">
+            <p class="text-light-emphasis">{!! nl2br(e($job->description)) !!}</p>
+        </div>
     </div>
 </div>

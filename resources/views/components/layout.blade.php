@@ -19,11 +19,6 @@
 
     {{ $slot }}
 
-    {{--<main>
-        <h1 class="text-body-emphasis">Get started with Bootstrap</h1>
-        <p class="fs-5 col-md-8">Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.</p>
-    </main>--}}
-
     <footer class="pt-5 my-5 text-body-secondary border-top">
         Created with Laravel &amp; Bootstrap &copy; 2023
     </footer>
