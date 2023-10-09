@@ -1,7 +1,11 @@
 import 'bootstrap';
+import Alpine from 'alpinejs';
 
 import * as Popper from '@popperjs/core'
 window.Popper = Popper
+
+window.Alpine = Alpine
+Alpine.start()
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
