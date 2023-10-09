@@ -3,7 +3,7 @@
     <div class="card-body">
         <div class="row mb-2">
             <div class="col">
-                <span class="me-2">Company</span>
+                <span class="me-2">{{ $job->employer->company_name }}</span>
                 <span>{{ $job->location }}</span>
             </div>
             <div class="col text-end">
@@ -17,3 +17,9 @@
         </div>
     </div>
 </div>
+
+<h4 class="mb-3 mt-5">Other jobs from {{ $job->employer->company_name }}</h4>
+
+@foreach($job->employer->jobs as $other_job)
+    <x-card :job="$other_job"></x-card>
+@endforeach

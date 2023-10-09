@@ -3,7 +3,7 @@
     <div class="card-body">
         <div class="row mb-2">
             <div class="col">
-                <span class="me-2">Company</span>
+                <span class="me-2">{{ $job->employer->company_name }}</span>
                 <span>{{ $job->location }}</span>
             </div>
             <div class="col text-end">
@@ -15,5 +15,7 @@
     </div>
     <div class="card-footer">
         <a href="{{ route('jobs.show', $job) }}" class="btn btn-sm btn-primary">Job details</a>
+
+        <span class="float-end"><small><i class="fa fa-clock"></i> {{ $job->created_at->diffForHumans() }}</small></span>
     </div>
 </div>
