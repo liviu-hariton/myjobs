@@ -55,6 +55,12 @@
     </div>
     @endif
 
+    @if(session('error'))
+        <div class="alert alert-danger">
+            <i class="fa fa-times-rectangle"></i> {{ session('error') }}
+        </div>
+    @endif
+
     {{ $slot }}
 
     <footer class="pt-5 my-5 text-body-secondary border-top">
