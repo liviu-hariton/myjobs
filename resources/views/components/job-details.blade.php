@@ -16,6 +16,17 @@
             <p class="text-light-emphasis">{!! nl2br(e($job->description)) !!}</p>
         </div>
     </div>
+    <div class="card-footer">
+        @auth()
+            @can('apply', $job)
+                <a href="{{ route('job.application.create', $job) }}" class="btn btn-outline-success"><i class="fa fa-check-circle"></i> Apply now</a>
+            @else
+                <span class="text-success"><i class="fa fa-check-circle"></i> You have already applied for this job!</span>
+            @endcan
+        @else
+            <a href="{{ route('auth.create') }}" class="btn btn-outline-secondary"><i class="fa fa-sign-in"></i> Sign in to apply</a>
+        @endauth
+    </div>
 </div>
 
 <h4 class="mb-3 mt-5">Other jobs from {{ $job->employer->company_name }}</h4>

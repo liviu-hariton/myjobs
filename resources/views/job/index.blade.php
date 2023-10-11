@@ -3,7 +3,7 @@
 
     <div class="card mb-3 bg-white" x-data="">
         <div class="card-body">
-            <form x-ref="filters" method="get" action="{{ route('jobs.index') }}" id="filtering-form">
+            <form x-ref="filters" method="get" action="{{ route('job.index') }}" id="filtering-form">
                 <div class="row">
                     <div class="col-6">
                         <span class="form-text">Search</span>

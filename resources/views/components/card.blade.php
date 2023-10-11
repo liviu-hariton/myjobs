@@ -14,7 +14,7 @@
         <h3 class="card-title">{{ $job->title }}</h3>
     </div>
     <div class="card-footer">
-        <a href="{{ route('jobs.show', $job) }}" class="btn btn-sm btn-primary">Job details</a>
+        <a href="{{ route('job.show', $job) }}" class="btn btn-sm btn-primary">Job details</a>
 
         <span class="float-end"><small><i class="fa fa-clock"></i> {{ $job->created_at->diffForHumans() }}</small></span>
     </div>
