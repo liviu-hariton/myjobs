@@ -17,5 +17,10 @@
                 <li class="breadcrumb-item active" aria-current="page">Jobs</li>
             @endif
         @endif
+
+        {{--my applications section--}}
+        @if(isset($section) && $section === 'my-applications')
+            <li class="breadcrumb-item active" aria-current="page">My Applications</li>
+        @endif
     </ol>
 </nav>
