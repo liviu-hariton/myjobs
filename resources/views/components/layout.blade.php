@@ -32,6 +32,7 @@
                     <ul class="dropdown-menu text-small">
                         <li><span class="dropdown-item-text text-light-emphasis"><i class="fa fa-user-alt"></i> {{ auth()->user()->name }}</span></li>
                         <li><a class="dropdown-item" href="{{ route('my-job-applications.index') }}">My applications</a></li>
+                        <li><a class="dropdown-item" href="{{ route('my-jobs.index') }}">My jobs</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <form method="post" action="{{ route('auth.destroy') }}">

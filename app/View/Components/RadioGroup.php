@@ -11,7 +11,12 @@ class RadioGroup extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(public string $name, public array $options)
+    public function __construct(
+        public string $name,
+        public array $options,
+        public ?bool $all = true,
+        public ?string $value = null
+    )
     {
         //
     }

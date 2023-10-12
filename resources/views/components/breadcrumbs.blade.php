@@ -27,5 +27,16 @@
         @if(isset($section) && $section === 'new-employer')
             <li class="breadcrumb-item active" aria-current="page">Create employer</li>
         @endif
+
+        {{--my jobs section--}}
+        @if(isset($section) && $section === 'my-jobs')
+            @if(Route::currentRouteName() !== 'my-jobs.create')
+                <li class="breadcrumb-item active" aria-current="page">My jobs</li>
+            @else
+                <li class="breadcrumb-item"><a href="{{ route('my-jobs.index') }}">My jobs</a></li>
+                <li class="breadcrumb-item active" aria-current="page">New job</li>
+            @endif
+
+        @endif
     </ol>
 </nav>
