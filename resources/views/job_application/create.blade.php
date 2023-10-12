@@ -5,7 +5,8 @@
 
     <div class="card bg-white">
         <div class="card-body">
-            <h4 class="card-title">Your job application</h4>
+            <h4 class="card-title mb-5">Your job application</h4>
+
             <div class="card-text">
                 <form method="post" action="{{ route('job.application.store', $job) }}" enctype="multipart/form-data">
                     @csrf

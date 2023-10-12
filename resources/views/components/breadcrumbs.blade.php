@@ -22,5 +22,10 @@
         @if(isset($section) && $section === 'my-applications')
             <li class="breadcrumb-item active" aria-current="page">My Applications</li>
         @endif
+
+        {{--new employer section--}}
+        @if(isset($section) && $section === 'new-employer')
+            <li class="breadcrumb-item active" aria-current="page">Create employer</li>
+        @endif
     </ol>
 </nav>
