@@ -30,11 +30,18 @@
 
         {{--my jobs section--}}
         @if(isset($section) && $section === 'my-jobs')
-            @if(Route::currentRouteName() !== 'my-jobs.create')
+            @if(Route::currentRouteName() !== 'my-jobs.create' && Route::currentRouteName() !== 'my-jobs.edit')
                 <li class="breadcrumb-item active" aria-current="page">My jobs</li>
             @else
                 <li class="breadcrumb-item"><a href="{{ route('my-jobs.index') }}">My jobs</a></li>
+
+                @if(Route::currentRouteName() === 'my-jobs.create')
                 <li class="breadcrumb-item active" aria-current="page">New job</li>
+                @endif
+
+                @if(Route::currentRouteName() === 'my-jobs.edit')
+                <li class="breadcrumb-item active" aria-current="page">Edit job</li>
+                @endif
             @endif
 
         @endif

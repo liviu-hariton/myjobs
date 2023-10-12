@@ -12,6 +12,10 @@
         </div>
 
         <h3 class="card-title">{{ $job->title }}</h3>
+
+        @if($job->deleted_at)
+            <span class="text-danger">Job deleted {{ $job->deleted_at->diffForHumans() }}</span>
+        @endif
     </div>
     <div class="card-footer">
         <div class="row">
